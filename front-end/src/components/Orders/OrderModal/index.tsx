@@ -1,5 +1,5 @@
 import { Action, ContainerModal, OrderDetails, Overlay, StatusContainer, Total } from './styled';
-import { Order } from '../../../@types/Orders';
+import { Order } from '../../../models/Orders';
 import { FormatCurrency } from '../../../utils/formatCurrency';
 import { useEffect } from 'react';
 import { Icon } from '../../../assets/Icon';
