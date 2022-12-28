@@ -53,8 +53,8 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
     color: #333;
   }
-  @media (max-width: 568px) {
+  @media (max-width: 600px) {
   html {
-    font-size: 67.5%;
+    font-size: 77.5%;
   }}
 `;

@@ -7,6 +7,12 @@ export const ContainerHeader = styled.header`
   justify-content: center;
   height: 12.375rem;
   align-items: center;
+
+
+
+  @media (max-width: 600px) {
+    padding: 0 10px;
+  }
 `;
 
 export const ContentHeader = styled.div`
@@ -16,6 +22,7 @@ export const ContentHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 
   .page-details{
     h1 {
@@ -31,5 +38,16 @@ export const ContentHeader = styled.div`
       opacity: 0.9;
       margin-top: 0.375rem;
     }
+  > button {
+    margin-top: 15px;
+    background: transparent;
+    border: 0;
+    color: #FFFFFF;
+
+    img{
+      width: 25px;
+      height: 25px;
+    }
+  }
   }
 `;

@@ -6,5 +6,11 @@ export const ContainerOrders = styled.div`
   margin: 2.5rem auto;
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 30px;
+  }
 `;
 
