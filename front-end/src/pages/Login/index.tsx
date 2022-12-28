@@ -41,7 +41,7 @@ export function Login () {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/');
+      navigate('/home');
     }
   }, [isAuthenticated]);
 
