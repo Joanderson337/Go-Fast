@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Board = styled.div`
-padding: 16px;
-border: 1px solid rgba(204, 204, 204, 0.4);
-border-radius: 16px;
+padding: 1rem;
+border: 0.0625rem solid rgba(204, 204, 204, 0.4);
+border-radius: 1rem;
 display: flex;
 justify-content: center;
 flex-direction: column;
@@ -11,11 +11,11 @@ align-items: center;
 flex: 1;
 
  > header{
-    padding: 8px;
-    font-size: 14px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
   }
 `;
 
@@ -23,31 +23,31 @@ export const ContainerTable = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 
 > button {
-    height: 128px;
+    height: 8rem;
     background: #FFFFFF;
-    border: 1px solid rgba(204, 204, 204, 0.4);
-    border-radius: 8px;
+    border: 0.0625rem solid rgba(204, 204, 204, 0.4);
+    border-radius: 0.5rem;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4px;
+    gap: 0.25rem;
 
     strong {
       font-weight: 500;
     }
 
     span{
-      font-size: 14px;
+      font-size: 0.875rem;
       color: #666;
     }
 
     & + button{
-      margin-top: 24px;
+      margin-top: 1.5rem;
     }
   }
 `;

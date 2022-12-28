@@ -5,11 +5,11 @@ export const Overlay = styled.div`
   height: 100%;
 
   position: fixed;
-  left: 0px;
-  top: 0px;
+  left: 0rem;
+  top: 0rem;
 
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4.5px);
+  backdrop-filter: blur(0.2813rem);
 
   display: flex;
   align-items: center;
@@ -18,9 +18,9 @@ export const Overlay = styled.div`
 
 export const ContainerModal = styled.div`
   background: #ffffff;
-  width: 480px;
-  border-radius: 8px;
-  padding: 32px;
+  width: 30rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
 
   > header {
     display: flex;
@@ -28,7 +28,7 @@ export const ContainerModal = styled.div`
     justify-content: space-between;
 
     strong {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
 
     button {
@@ -40,59 +40,59 @@ export const ContainerModal = styled.div`
 `;
 
 export const StatusContainer = styled.div`
-  margin-top: 32px;
+  margin-top: 2rem;
 
   small {
-    font-size: 14px;
+    font-size: 0.875rem;
     opacity: 0.8;
   }
 
   div {
-    margin-top: 8px;
+    margin-top: 0.5rem;
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
     align-items: center;
   }
 `;
 
 export const OrderDetails = styled.div`
-  margin-top: 32px;
+  margin-top: 2rem;
 
   > strong {
     color: #333333;
     opacity: 0.8;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .order-items {
-    margin-top: 16px;
+    margin-top: 1rem;
 
     .item {
       display: flex;
       & + .item {
-        margin-top: 16px;
+        margin-top: 1rem;
       }
 
       img {
-        border-radius: 6px;
+        border-radius: 0.375rem;
       }
 
       .quantity {
-        font-size: 14px;
+        font-size: 0.875rem;
         color: #666;
         display: block;
-        min-width: 20px;
-        margin-left: 12px;
+        min-width: 1.25rem;
+        margin-left: 0.75rem;
       }
 
       .product-details {
-        margin-left: 4px;
+        margin-left: 0.25rem;
         strong {
           display: block;
-          margin-bottom: 4px;
+          margin-bottom: 0.25rem;
         }
 
         span {
-          font-size: 14px;
+          font-size: 0.875rem;
           color: #666;
         }
       }
@@ -104,11 +104,11 @@ export const Total = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 
   span {
     font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   opacity: 0.8;
   }
 `;
@@ -116,24 +116,24 @@ export const Total = styled.div`
 export const Action = styled.footer`
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 32px;
+    gap: 0.75rem;
+    margin-top: 2rem;
 
     .primary{
       background: #333333;
-      border-radius: 48px;
+      border-radius: 3rem;
       border: 0;
       color: #fff;
-      padding: 12px 24px;
+      padding: 0.75rem 1.5rem;
 
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 0.5rem;
     }
 
     .secundary{
-      padding: 14px 24px;
+      padding: 0.875rem 1.5rem;
       color: #D73035;
       font-weight: bold;
       border: 0;
