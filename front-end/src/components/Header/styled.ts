@@ -8,8 +8,6 @@ export const ContainerHeader = styled.header`
   height: 12.375rem;
   align-items: center;
 
-
-
   @media (max-width: 600px) {
     padding: 0 10px;
   }
@@ -23,8 +21,12 @@ export const ContentHeader = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 
   .page-details{
+
     h1 {
       font-size: 2rem;
       line-height: 120%;
