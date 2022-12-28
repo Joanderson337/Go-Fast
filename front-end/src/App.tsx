@@ -1,13 +1,14 @@
-import { Header } from './components/Header';
-import { Orders } from './components/Orders';
 import { GlobalStyles } from './styles/GlobalStyled';
+import { Router } from './routes/Routes';
+import { UserContextProvider } from './contexts/user.context';
 
 export function App() {
   return(
     <>
-      <GlobalStyles />
-      <Header />
-      <Orders />
+      <UserContextProvider>
+        <GlobalStyles />
+        <Router />
+      </UserContextProvider>
     </>
   );
 }
