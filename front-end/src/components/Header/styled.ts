@@ -23,10 +23,10 @@ export const ContentHeader = styled.div`
 
   @media (max-width: 600px) {
     justify-content: center;
+    gap: 5px;
   }
 
   .page-details{
-
     h1 {
       font-size: 2rem;
       line-height: 120%;
