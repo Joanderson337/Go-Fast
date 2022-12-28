@@ -1,8 +1,8 @@
 import { ContainerHeader, ContentHeader } from './styled';
-import logo from '../../assets/images/logo.gif';
+import logo from '../../assets/Icon/image/logo.gif';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../config/firebase.config';
-import close from '../../assets/images/icon-close.svg';
+import { Icon } from '../../assets/Icon';
 
 export function Header(){
   return(
@@ -12,7 +12,7 @@ export function Header(){
           <h1>Pedidos</h1>
           <h2>acompanhe os pedidos dos clientes</h2>
           <button type='button' onClick={() => signOut(auth)}>
-            <img src={close} alt="sair" />
+            <Icon name='close' />
           </button>
         </div>
         <img src={logo} alt="logo" />

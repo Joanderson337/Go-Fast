@@ -1,8 +1,8 @@
 import { Action, ContainerModal, OrderDetails, Overlay, StatusContainer, Total } from './styled';
-import close from '../../../assets/images/close-icon.svg';
-import { Order } from '../../../types/Orders';
+import { Order } from '../../../@types/Orders';
 import { FormatCurrency } from '../../../utils/formatCurrency';
 import { useEffect } from 'react';
+import { Icon } from '../../../assets/Icon';
 
 interface IOrderModal {
   visible: boolean;
@@ -41,7 +41,7 @@ export function OrderModal({visible, order, onClose}: IOrderModal){
         <header>
           <strong>Mesa {order.table}</strong>
           <button type='button' onClick={onClose}>
-            <img src={close} alt="icone de fechar" />
+            <Icon name='x' />
           </button>
         </header>
 

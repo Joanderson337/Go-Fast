@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Order } from '../../../types/Orders';
+import { Order } from '../../../@types/Orders';
 import { OrderModal } from '../OrderModal';
 import { Board, ContainerTable } from './styled';
 

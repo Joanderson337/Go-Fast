@@ -45,11 +45,6 @@ export const ContentHeader = styled.div`
     background: transparent;
     border: 0;
     color: #FFFFFF;
-
-    img{
-      width: 25px;
-      height: 25px;
-    }
   }
   }
 `;

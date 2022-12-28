@@ -18,7 +18,7 @@ import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Loading } from '../../components/Loading';
 import { auth } from '../../config/firebase.config';
-import logo from '../../assets/images/logo.gif';
+import logo from '../../assets/Icon/image/logo.gif';
 
 interface ILoginForm {
   email: string
@@ -121,6 +121,11 @@ export function Login () {
             onClick={() => handleSubmit(handleSubmitPress)()}
           >
             Entrar
+          </CustomButton>
+          <CustomButton
+
+          >
+            ADM
           </CustomButton>
         </LoginContent>
       </LoginContainer>
