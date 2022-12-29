@@ -43,6 +43,7 @@ export function Login () {
   useEffect(() => {
     if (isAuthenticated) {
       navigate('/home');
+      toast.success('bem-vino de volta!');
     }
   }, [isAuthenticated]);
 
