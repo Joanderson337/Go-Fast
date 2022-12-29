@@ -16,7 +16,7 @@
     "react-router-dom": "^6.6.1",
     "react-spinners": "^0.13.7",
     "react-toastify": "^9.1.1",
-    "styled-components": "^5.3.6",
+    "styled-components": "^16.8.0",
     "validator": "^13.7.0",
     "vite-plugin-svgr": "^2.4.0"
   },
