@@ -6,6 +6,7 @@ import { Loading } from '../components/Loading';
 import { auth, db } from '../config/firebase.config';
 import { UserContext } from '../contexts/user.context';
 import { userConverter } from '../converters/firestore.converters';
+import { Adm } from '../pages/Adm';
 import { Home } from '../pages/Home';
 import { Login } from '../pages/Login';
 
@@ -50,6 +51,7 @@ export function Router () {
     <BrowserRouter>
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path='/adm' element={<Adm />} />
         <Route path="/" element={<Login />} />
       </Routes>
     </BrowserRouter>

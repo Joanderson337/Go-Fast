@@ -11,23 +11,18 @@ import { ErrorMessage } from '../../components/ErrorMessage';
 import {
   AuthError,
   AuthErrorCodes,
-  signInWithEmailAndPassword,
 } from 'firebase/auth';
-import { UserContext } from '../../contexts/user.context';
-import { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {  useState } from 'react';
 import { Loading } from '../../components/Loading';
-import { auth } from '../../config/firebase.config';
-import logo from '../../assets/Icon/image/logo.gif';
-import { toast } from 'react-toastify';
 import { Icon } from '../../assets/Icon';
+import { useNavigate } from 'react-router-dom';
 
 interface ILoginForm {
-  email: string
+  login: string
   password: string
 }
 
-export function Login () {
+export function Adm () {
   const {
     register,
     setError,
@@ -36,32 +31,16 @@ export function Login () {
   } = useForm<ILoginForm>();
 
   const [isLoading, setIsLoading] = useState(false);
-
-  const { isAuthenticated } = useContext(UserContext);
-
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate('/home');
-      toast.success('bem-vindo de volta!');
-    }
-  }, [isAuthenticated]);
-
-  const handleAdm = () => {
-    navigate('/adm');
+  const handleLogin = () => {
+    navigate('/');
   };
 
   const handleSubmitPress = async (data: ILoginForm) => {
     try {
       setIsLoading(true);
 
-      const userCredentials = await signInWithEmailAndPassword(
-        auth,
-        data.email,
-        data.password
-      );
-      console.log({ userCredentials });
     } catch (error) {
       const _error = error as AuthError;
 
@@ -70,8 +49,7 @@ export function Login () {
       }
 
       if (_error.code === AuthErrorCodes.USER_DELETED) {
-        toast.error('hmmm, seu e-mail não é valido');
-        return setError('email', { type: 'notFound' });
+        return setError('login', { type: 'notFound' });
       }
     } finally {
       setIsLoading(false);
@@ -84,31 +62,32 @@ export function Login () {
       {isLoading && <Loading />}
       <LoginContainer>
         <LoginContent>
-          <img src={logo} alt="" />
+          <Icon name='adm' size={80} />
           <LoginInputContainer>
             <p>E-mail</p>
             <CustomInput
-              hasError={!!errors?.email}
+              hasError={!!errors?.login}
               placeholder="Digite seu e-mail"
-              {...register('email', {
+              {...register('login', {
                 required: true,
                 validate: (value) => {
+
                   return validator.isEmail(value);
                 }
               })}
             />
 
-            {errors?.email?.type === 'required' &&  (
+            {errors?.login?.type === 'required' &&  (
               <ErrorMessage>O e-mail é obrigatório.</ErrorMessage>
             )}
 
-            {errors?.email?.type === 'notFound' && (
+            {errors?.login?.type === 'notFound' && (
               <ErrorMessage>
                 O e-mail não foi encontrado.
               </ErrorMessage>
             )}
 
-            {errors?.email?.type === 'validate' && (
+            {errors?.login?.type === 'validate' && (
               <ErrorMessage>
                 Por favor, insira um e-mail válido.
               </ErrorMessage>
@@ -139,9 +118,9 @@ export function Login () {
             Entrar
           </CustomButton>
           <CustomButton
-            onClick={handleAdm}
+            onClick={handleLogin}
           >
-            <Icon name='adm' /> ADM
+            <Icon name='back' /> Voltar
           </CustomButton>
         </LoginContent>
       </LoginContainer>

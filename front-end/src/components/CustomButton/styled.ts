@@ -16,8 +16,17 @@ export const CustomButtonContainer = styled.button`
   padding-left: 0.9375rem;
   font-weight: 600;
   transition: all 0.5s ease;
+
+  display: flex;
+
+  gap: 0.5rem;
+
   &:hover {
     cursor: pointer;
     background-color: #836FFF;
   }
+
+  & + button{
+      margin-top: 1rem;
+    }
 `;
