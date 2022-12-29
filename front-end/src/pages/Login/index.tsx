@@ -19,6 +19,7 @@ import { useNavigate } from 'react-router-dom';
 import { Loading } from '../../components/Loading';
 import { auth } from '../../config/firebase.config';
 import logo from '../../assets/Icon/image/logo.gif';
+import { toast } from 'react-toastify';
 
 interface ILoginForm {
   email: string
@@ -63,6 +64,7 @@ export function Login () {
       }
 
       if (_error.code === AuthErrorCodes.USER_DELETED) {
+        toast.error('hmmm, seu e-mail não é valido');
         return setError('email', { type: 'notFound' });
       }
     } finally {
@@ -90,12 +92,20 @@ export function Login () {
               })}
             />
 
-            {errors?.email?.type === 'required' && (
+            {errors?.email?.type === 'required' &&  (
               <ErrorMessage>O e-mail é obrigatório.</ErrorMessage>
             )}
 
+            {errors?.email?.type === 'notFound' && (
+              <ErrorMessage>
+                O e-mail não foi encontrado.
+              </ErrorMessage>
+            )}
+
             {errors?.email?.type === 'validate' && (
-              <ErrorMessage>Por favor, insira um e-mail válido.</ErrorMessage>
+              <ErrorMessage>
+                Por favor, insira um e-mail válido.
+              </ErrorMessage>
             )}
           </LoginInputContainer>
 
